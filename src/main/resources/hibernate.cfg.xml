@@ -4,16 +4,16 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/pen?useSSL=false&amp;serverTimezone=UTC</property>
-        <property name="connection.username">root</property>   <!--нельзя это юзать через веб-->
-        <property name="connection.password">123456</property>   <!--нельзя это юзать через веб JNDI?-->
+        <property name="connection.url">jdbc:mysql://localhost:3306/DBname?useSSL=false&amp;serverTimezone=UTC</property>
+        <property name="connection.username">login</property>
+        <property name="connection.password">password</property>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.connection.characterEncoding">utf8</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
-        <property name="default_schema">pen</property>
-        <property name="hibernate.current_session_context_class">thread</property>  <!--для веб нужна привязка к транзакции-->
+        <property name="default_schema">DBname</property>
+        <property name="hibernate.current_session_context_class">thread</property>
         <mapping class="com.example.demo.entity.Book"/>
         <mapping class="com.example.demo.entity.Author"/>
     </session-factory>
